@@ -16,6 +16,8 @@ app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 
 /**************** A P I  R O U T E S ******************/ 
+app.use('/api/users', require('./routes/api/users'));
+
 
 /**************** C A T C H  A L L  R O U T E  ******************/ 
 app.get('/*', function(req, res) {

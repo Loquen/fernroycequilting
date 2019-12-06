@@ -1,5 +1,4 @@
 const User = require('../models/user');
-const Profile = require('../models/profile');
 const jwt = require('jsonwebtoken');
 const SECRET = process.env.SECRET;
 
@@ -10,14 +9,8 @@ module.exports = {
 
 async function signup(req, res) {
   const user = new User(req.body);
-  const profile = new Profile({
-    user: user._id,
-    videoList: [],
-    daysList: []
-  });
   try {
     await user.save();
-    await profile.save();
     const token = createJWT(user);
     res.json({ token });
   } catch (err) {
