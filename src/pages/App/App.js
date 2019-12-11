@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import userService from '../../utils/userService';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
+import AboutPage from '../AboutPage/AboutPage';
+import ContactPage from '../ContactPage/ContactPage';
+import EventPage from '../EventPage/EventPage';
+import GalleryPage from '../GalleryPage/GalleryPage';
+import LecturePage from '../LecturePage/LecturePage';
+import UploadPage from '../UploadPage/UploadPage';
 import './App.css';
 
 class App extends Component {
@@ -39,6 +45,29 @@ class App extends Component {
               history={history}
               handleSignupOrLogin={this.handleSignupOrLogin}
             />
+          }/>
+          <Route exact path='/' render={() => 
+            <AboutPage />
+          }/>
+          <Route exact path='/contact' render={() => 
+            <ContactPage />
+          }/>
+          <Route exact path='/event' render={() => 
+            <EventPage />
+          }/>
+          <Route exact path='/gallery' render={() => 
+            <GalleryPage />
+          }/>
+          <Route exact path='/lecture' render={() => 
+            <LecturePage />
+          }/>
+          <Route exact path='/upload' render={() => 
+            userService.getUser() ?           
+              <UploadPage
+                user={this.state.user}
+              />
+            :
+              <Redirect to='/login' />
           }/>
         </Switch>
 
