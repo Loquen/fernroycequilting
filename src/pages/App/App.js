@@ -8,6 +8,7 @@ import ContactPage from '../ContactPage/ContactPage';
 import EventPage from '../EventPage/EventPage';
 import GalleryPage from '../GalleryPage/GalleryPage';
 import LecturePage from '../LecturePage/LecturePage';
+import NavBar from '../../components/NavBar/NavBar';
 import UploadPage from '../UploadPage/UploadPage';
 import './App.css';
 
@@ -33,6 +34,11 @@ class App extends Component {
   render(){
     return (
       <div className="App">
+        <NavBar 
+          location={window.location.pathname}
+          user={this.state.user}
+          handleLogout={this.handleLogout}
+        />
         <Switch>
           <Route exact path='/signup' render={({ history }) => 
             <SignupPage
