@@ -12,7 +12,11 @@ const GalleryPage = () => {
       <GalleryFilter 
         categories={['Strings', 'Wool', 'Stars']}
       />
-      <GalleryImage />
+      <GalleryImage 
+        images={[{name: 'quilt A', url:'https://placebear.com/g/300/300', category: 'wool'},
+                 {name: 'quilt B', url:'https://placebear.com/g/300/300', category: 'strings'},
+                 {name: 'quilt C', url:'https://placebear.com/g/300/300', category: 'stars'}]}
+      />
     </Container>
   );
 }

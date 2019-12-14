@@ -1,9 +1,15 @@
 import React from 'react';
 
-let GalleryImage = () => {
+const GalleryImage = (props) => {
   return (
     <div>
-      GalleryImage
+      {props.images.map(image => 
+        <div>
+          <img src={image.url} alt={image.name}/>
+          <p>{image.name}</p>
+        </div>
+      )}
+
     </div>
   );
 }
