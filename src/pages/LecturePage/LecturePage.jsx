@@ -6,26 +6,32 @@ class LecturePage extends Component {
   state = {
     workshops: [
       {
+        title:'Parts and Pieces',
         url:'https://placebear.com/g/300/300',
         details:'testing description of workshop A'
       },
       {
+        title:'Liberated Medallions',
         url:'https://placebear.com/g/300/300',
         details:'testing description of workshop B'
       },
       {
+        title:'Liberated Stars',
         url:'https://placebear.com/g/300/300',
         details:'testing description of workshop C'
       },
       {
+        title:'Working Small',
         url:'https://placebear.com/g/300/300',
         details:'testing description of workshop D'
       },
       {
+        title:'String Theory Basics',
         url:'https://placebear.com/g/300/300',
         details:'testing description of workshop E'
       },
       {
+        title:'Parts and Pieces',
         url:'https://placebear.com/g/300/300',
         details:'testing description of workshop F'
       },
@@ -135,6 +141,7 @@ class LecturePage extends Component {
         </div>
         {this.state.workshops.map(workshop => 
           <Workshop 
+            title={workshop.title}
             url={workshop.url}
             details={workshop.details}
           />
