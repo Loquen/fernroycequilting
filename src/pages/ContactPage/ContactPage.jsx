@@ -1,18 +1,21 @@
 import React from 'react';
 import { Container, Jumbotron } from 'react-bootstrap';
 import ContactForm from '../../components/ContactForm/ContactForm';
+import SubscribeForm from '../../components/SubscribeForm/SubscribeForm';
 
 const ContactPage = () => {
   return (
     <Container>
-      <Jumbotron>
+      <Jumbotron className='title'>
         <h1>Contact Me!</h1>
         <p>
           Send me an email to schdule a lecture at your guild, 
           local quilt store or just say hello!
         </p>
       </Jumbotron>
-      <ContactForm />
+      <ContactForm/>
+      <hr/>
+      <SubscribeForm/>
     </Container>
   );
 }

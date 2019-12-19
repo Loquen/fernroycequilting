@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { Container, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
-class ContactForm extends Component {
+class SubscribeForm extends Component {
 
   state = {
     name: '',
-    email: '',
-    subject: '',
-    message: ''
+    email: ''
   };
 
   handleChange = (e) => {
@@ -21,16 +18,17 @@ class ContactForm extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(this.state.email, this.state.name, this.state.subject, this.state.message);
+    console.log(this.state.email, this.state.name);
   }
 
   isFormInvalid() {
-    return !(this.state.name && this.state.email && this.state.subject && this.state.message);
+    return !(this.state.name && this.state.email);
   }
 
   render() {
     return (
       <form className='form-horizontal' onSubmit={this.handleSubmit} >
+        <h4 className='title'><strong>Subscribe to my updates!</strong></h4>
         <div className='form-group'>
           <div className='col-sm-12'>
             <input type='text' className='form-control' placeholder='Name' value={this.state.name} name='name' onChange={this.handleChange} />
@@ -42,19 +40,8 @@ class ContactForm extends Component {
           </div>
         </div>
         <div className='form-group'>
-          <div className='col-sm-12'>
-            <input type='text' className='form-control' placeholder='Subject' value={this.state.subject} name='subject' onChange={this.handleChange} />
-          </div>
-        </div>
-        <div className='form-group'>
-          <div className='col-sm-12'>
-            <textarea className='form-control' placeholder='Your message...' value={this.state.message} name='message' onChange={this.handleChange} />
-          </div>
-        </div>
-        <div className='form-group'>
           <div className='col-sm-12 text-center'>
-            <Button type='submit' className='btn btn-default' disabled={this.isFormInvalid()}>Say Hello</Button>&nbsp;&nbsp;
-            <Link to='/'>Cancel</Link>
+            <Button type='submit' className='btn btn-default' disabled={this.isFormInvalid()}>Subscribe!</Button>&nbsp;&nbsp;
           </div>
         </div>
       </form>
@@ -62,4 +49,4 @@ class ContactForm extends Component {
   }
 }
 
-export default ContactForm;
+export default SubscribeForm;
