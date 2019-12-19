@@ -1,16 +1,17 @@
 import React from 'react';
+import { Row } from 'react-bootstrap';
+import './GalleryImage.css'
 
 const GalleryImage = (props) => {
   return (
-    <div>
+    <Row className='justify-content-center'>
       {props.images.map(image => 
-        <div>
+        <div className='gallery-img'>
           <img src={image.url} alt={image.name}/>
           <p>{image.name}</p>
         </div>
       )}
-
-    </div>
+    </Row>
   );
 }
 
