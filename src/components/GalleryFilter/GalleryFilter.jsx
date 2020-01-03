@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class GalleryFilter extends React.Component {
+class GalleryFilter extends Component {
   constructor(props) {
     super(props);
     this.state = {value: 'coconut'};
