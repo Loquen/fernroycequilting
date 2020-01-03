@@ -6,9 +6,9 @@ const eventsCtrl = require('../../controllers/events');
 
 router.use(require('../../config/auth'));
 router.get('/', eventsCtrl.getAllEvents);
-router.get('/new', eventsCtrl.newEvent);
-router.post('/:id', checkAuth, eventsCtrl.create);
-router.put('/:id', checkAuth, eventsCtrl.edit);
+// router.get('/new', eventsCtrl.newEvent);
+// router.post('/:id', checkAuth, eventsCtrl.create);
+// router.put('/:id', checkAuth, eventsCtrl.edit);
 
 /*********** H E L P E R S *********/
 
