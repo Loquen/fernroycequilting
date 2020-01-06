@@ -4,16 +4,14 @@ const BASE_URL = '/api/events/';
 
 // Find all events in DB and return to calling function as JSON
 function getAll() {
-  const options = {
-    method: 'GET',
-    
-  };
-  return fetch(`${BASE_URL}`, options)
+  // const options = {
+  //   method: 'GET'
+  // };       , options
+  return fetch(`${BASE_URL}`)
     .then(res => res.json());
 }
 
 // Send POST request to DB and return with Success or Failure JSON message
-
 function create(name, url, date, location, details){
   const options = {
     method: 'POST',
