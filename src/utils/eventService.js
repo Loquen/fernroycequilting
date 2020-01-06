@@ -18,6 +18,7 @@ function create(name, url, date, location, details){
   const options = {
     method: 'POST',
     headers: {
+      'Accept': 'application/json',
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + tokenService.getToken()
     }
@@ -31,9 +32,7 @@ function create(name, url, date, location, details){
     })
   };
 
-  return fetch(`${BASE_URL}`, options).then(res => {
-    return res.json()
-  });
+  return fetch(`${BASE_URL}`, options).then(res => res.json());
 }
 
 // Send PUT request to DB and return with Updated event

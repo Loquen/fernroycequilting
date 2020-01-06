@@ -21,9 +21,14 @@ class EventForm extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault();
-    let test = await eventService.getAll();
-
-    alert(test, 'test');
+    let test = await eventService.create(
+      this.state.name, 
+      this.state.url, 
+      this.state.date,
+      this.state.location,
+      this.state.details
+    );
+    console.log('form submit:', test);
   }
 
   render(){
@@ -59,7 +64,7 @@ class EventForm extends Component {
               <div className='form-group'>
                 <div className='col-sm-12'>
                   <input 
-                    type='text' 
+                    type='date' 
                     className='form-control' 
                     placeholder='Date' 
                     value={this.state.date} 

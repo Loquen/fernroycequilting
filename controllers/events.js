@@ -13,9 +13,21 @@ async function getAllEvents(req, res) {
 }
 
 async function create(req, res) {
-  let event = Event.create(req.body)
-                  //  .then(
-                  //    return(res.json(event)))
+
+  // return Event.create(req.body)
+  //   .then(() => (res.redirect('/event')))
+                  
+  var event = new Event(req.body);
+
+  // console.log(event);
+  event.save(function(err){
+    if(err) {
+      console.log(err);
+      return res.json({ error: err });
+    }
+    console.log(event);
+    return res.json(event);
+  });
 }
 
 async function update(req, res) {
