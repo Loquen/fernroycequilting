@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Button, Alert } from 'react-bootstrap';
-import workshopService from '../../utils/workshopService';
+import imageService from '../../utils/imageService';
 
-class WorkshopForm extends Component {
+class ImageForm extends Component {
 
   state = {
-    title: '',
     url: '',
-    image_text: '',
-    details: '',
+    category: '',
+    name: '',
     show: false,
   };
 
@@ -21,11 +20,10 @@ class WorkshopForm extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault();
-    await workshopService.create(
-      this.state.title, 
+    await imageService.create(
       this.state.url, 
-      this.state.image_text,
-      this.state.details
+      this.state.category,
+      this.state.name
     );
     this.setState({show: true})
   }
@@ -33,24 +31,12 @@ class WorkshopForm extends Component {
   render(){
     return (
       <>
-        <header><h1 className='title'>Create A New Workshop</h1></header>
+        <header><h1 className='title'>Create A New Image</h1></header>
         <Alert show={this.state.show} variant='success'>
-          Workshop successfully uploaded
+          Image successfully uploaded
         </Alert>
         <Container>        
           <form className='form-horizontal' onSubmit={this.handleSubmit} >
-            <div className='form-group'>
-              <div className='col-sm-12'>
-                <input 
-                  type='text' 
-                  className='form-control' 
-                  placeholder='Title' 
-                  value={this.state.title} 
-                  name='title' 
-                  onChange={this.handleChange} 
-                />
-              </div>
-            </div>
             <div className='form-group'>
               <div className='col-sm-12'>
                 <input 
@@ -68,9 +54,9 @@ class WorkshopForm extends Component {
                 <input 
                   type='text' 
                   className='form-control' 
-                  placeholder='Image Blurb' 
-                  value={this.state.image_text} 
-                  name='image_text' 
+                  placeholder='Category' 
+                  value={this.state.category} 
+                  name='category' 
                   onChange={this.handleChange} 
                 />
               </div>
@@ -80,9 +66,9 @@ class WorkshopForm extends Component {
                 <input 
                   type='text' 
                   className='form-control' 
-                  placeholder='Description' 
-                  value={this.state.details} 
-                  name='details' 
+                  placeholder='Name' 
+                  value={this.state.name} 
+                  name='name' 
                   onChange={this.handleChange} 
                 />
               </div>
@@ -100,4 +86,4 @@ class WorkshopForm extends Component {
   }
 }
 
-export default WorkshopForm;
+export default ImageForm;

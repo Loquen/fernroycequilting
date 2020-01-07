@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Jumbotron } from 'react-bootstrap';
 import EventForm from '../../components/UploadForms/EventForm';
 import WorkshopForm from '../../components/UploadForms/WorkshopForm';
+import ImageForm from '../../components/UploadForms/ImageForm';
 
 const UploadPage = () => {
   return (
@@ -11,6 +12,7 @@ const UploadPage = () => {
       </Jumbotron>
       <EventForm />
       <WorkshopForm />
+      <ImageForm />
     </Container>
   );
 }
