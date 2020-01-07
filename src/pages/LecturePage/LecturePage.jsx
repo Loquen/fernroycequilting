@@ -1,43 +1,20 @@
 import React, { Component } from 'react';
 import { Container, Jumbotron } from 'react-bootstrap';
 import Workshop from '../../components/Workshop/Workshop';
+import workshopService from '../../utils/workshopService';
 
 class LecturePage extends Component {
+
   state = {
-    workshops: [
-      {
-        title:'Parts and Pieces',
-        url:'https://placebear.com/g/300/300',
-        details:'testing description of workshop A'
-      },
-      {
-        title:'Liberated Medallions',
-        url:'https://placebear.com/g/300/300',
-        details:'testing description of workshop B'
-      },
-      {
-        title:'Liberated Stars',
-        url:'https://placebear.com/g/300/300',
-        details:'testing description of workshop C'
-      },
-      {
-        title:'Working Small',
-        url:'https://placebear.com/g/300/300',
-        details:'testing description of workshop D'
-      },
-      {
-        title:'String Theory Basics',
-        url:'https://placebear.com/g/300/300',
-        details:'testing description of workshop E'
-      },
-      {
-        title:'Parts and Pieces',
-        url:'https://placebear.com/g/300/300',
-        details:'testing description of workshop F'
-      },
-    ]
+    workshops: []
   };
 
+  async componentDidMount() {
+    const workshops = await workshopService.getAll();
+
+    this.setState({ workshops });
+  }
+  
   render(){
     return (
       <Container>

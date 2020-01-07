@@ -22,8 +22,8 @@ class GalleryFilter extends Component {
           Choose a Category:
           <select value={this.state.value} onChange={this.handleChange}>
             <option value='all'>All Images</option>
-            {this.props.categories.map(category => 
-              <option value={category.toLowerCase()}>{category}</option>
+            {this.props.categories.map((category, idx) => 
+              <option key={idx} value={category.toLowerCase()}>{category}</option>
             )}
           </select>
         </label>

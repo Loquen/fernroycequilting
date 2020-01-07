@@ -5,8 +5,8 @@ import './GalleryImage.css'
 const GalleryImage = (props) => {
   return (
     <Row className='justify-content-center'>
-      {props.images.map(image => 
-        <div className='gallery-img'>
+      {props.images.map((image, idx) => 
+        <div key={idx} className='gallery-img'>
           <img src={image.url} alt={image.name}/>
           <p>{image.name}</p>
         </div>

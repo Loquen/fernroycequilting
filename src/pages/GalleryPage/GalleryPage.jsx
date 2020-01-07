@@ -1,27 +1,36 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Container, Jumbotron } from 'react-bootstrap';
-import GalleryImage from '../../components/GalleryImage/GalleryImage'
-import GalleryFilter from '../../components/GalleryFilter/GalleryFilter'
+import GalleryImage from '../../components/GalleryImage/GalleryImage';
+import GalleryFilter from '../../components/GalleryFilter/GalleryFilter';
+import imageService from '../../utils/imageService';
 
-const GalleryPage = () => {
-  return (
-    <Container>
-      <Jumbotron>
-        <h1 className='title'>Gallery Page!</h1>
-      </Jumbotron>
-      <GalleryFilter 
-        categories={['Strings', 'Wool', 'Stars']}
-      />
-      <GalleryImage 
-        images={[{name: 'quilt A', url:'https://placebear.com/g/300/300', category: 'wool'},
-                 {name: 'quilt B', url:'https://placebear.com/g/300/300', category: 'strings'},
-                 {name: 'quilt C', url:'https://placebear.com/g/300/300', category: 'stars'},
-                 {name: 'quilt D', url:'https://placebear.com/g/300/300', category: 'wool'},
-                 {name: 'quilt E', url:'https://placebear.com/g/300/300', category: 'strings'},
-                 {name: 'quilt F', url:'https://placebear.com/g/300/300', category: 'stars'}]}
-      />
-    </Container>
-  );
+class GalleryPage extends Component {
+
+  state = {
+    images: []
+  }
+
+  async componentDidMount() {
+    const images = await imageService.getAll();
+
+    this.setState({images});
+  }
+
+  render() {
+    return (
+      <Container>
+        <Jumbotron>
+          <h1 className='title'>Gallery</h1>
+        </Jumbotron>
+        <GalleryFilter 
+          categories={['Strings', 'Wool', 'Stars']}
+        />
+        <GalleryImage 
+          images={this.state.images}
+        />
+      </Container>
+    );
+  }
 }
 
 export default GalleryPage;
