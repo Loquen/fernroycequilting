@@ -139,8 +139,9 @@ class LecturePage extends Component {
             </p>
           </h4>
         </div>
-        {this.state.workshops.map(workshop => 
+        {this.state.workshops.map((workshop, idx) => 
           <Workshop 
+            key={idx}
             title={workshop.title}
             url={workshop.url}
             details={workshop.details}

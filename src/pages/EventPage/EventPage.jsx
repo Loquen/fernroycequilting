@@ -14,14 +14,14 @@ class EventPage extends Component {
 
     this.setState({
       events
-    })
+    });
   }
 
   render(){
     return (
       <Container>
         <Jumbotron>
-          <h1>Events!</h1>
+          <h1 className='title'>Events!</h1>
         </Jumbotron>
         
         {this.state.events.map((event, idx) => 
