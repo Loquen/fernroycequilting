@@ -25,7 +25,13 @@ class ImageForm extends Component {
       this.state.category,
       this.state.name
     );
-    this.setState({show: true})
+    
+    this.setState({
+      show: true,
+      url: '',
+      category: '',
+      name: ''
+    })
   }
 
   isFormInvalid() {

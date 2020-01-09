@@ -27,7 +27,13 @@ class WorkshopForm extends Component {
       this.state.image_text,
       this.state.details
     );
-    this.setState({show: true})
+    this.setState({
+      show: true,
+      title: '',
+      url: '',
+      image_text: '',
+      details: ''
+    })
   }
 
   isFormInvalid() {

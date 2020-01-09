@@ -29,7 +29,14 @@ class EventForm extends Component {
       this.state.location,
       this.state.details
     );
-    this.setState({show: true})
+    this.setState({
+      show: true,
+      name: '',
+      url: '',
+      date: '',
+      location: '',
+      details: ''
+    })
   }
 
   isFormInvalid() {
