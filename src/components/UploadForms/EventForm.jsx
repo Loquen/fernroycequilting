@@ -32,6 +32,10 @@ class EventForm extends Component {
     this.setState({show: true})
   }
 
+  isFormInvalid() {
+    return !(this.state.name && this.state.url && this.state.date && this.state.location && this.state.details);
+  }
+
   render(){
     return (
       <>
@@ -103,7 +107,13 @@ class EventForm extends Component {
             </div>
             <div className='form-group'>
               <div className='col-sm-12 text-center'>
-                <Button className='btn btn-default' type='submit'>Upload</Button>&nbsp;&nbsp;&nbsp;
+                <Button 
+                  className='btn btn-default' 
+                  type='submit' 
+                  disabled={this.isFormInvalid()}
+                >
+                  Upload
+                </Button>&nbsp;&nbsp;&nbsp;
                 <Link to='/'>Cancel</Link>
               </div>
             </div>

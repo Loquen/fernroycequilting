@@ -1,0 +1,8 @@
+.workshop-container {
+  display: flex;
+  align-items: center;
+}
+
+.workshop-container p {
+  margin-left: 30px;
+}

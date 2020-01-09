@@ -12,7 +12,7 @@ class LecturePage extends Component {
   async componentDidMount() {
     const workshops = await workshopService.getAll();
 
-    this.setState({ workshops });
+    this.setState({ workshops: workshops });
   }
   
   render(){

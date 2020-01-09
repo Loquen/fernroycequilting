@@ -30,6 +30,10 @@ class WorkshopForm extends Component {
     this.setState({show: true})
   }
 
+  isFormInvalid() {
+    return !(this.state.title && this.state.url && this.state.image_text && this.state.details);
+  }
+
   render(){
     return (
       <>
@@ -89,7 +93,13 @@ class WorkshopForm extends Component {
             </div>
             <div className='form-group'>
               <div className='col-sm-12 text-center'>
-                <Button className='btn btn-default' type='submit'>Upload</Button>&nbsp;&nbsp;&nbsp;
+                <Button 
+                  className='btn btn-default' 
+                  type='submit'
+                  disabled={this.isFormInvalid()}
+                >
+                  Upload
+                </Button>&nbsp;&nbsp;&nbsp;
                 <Link to='/'>Cancel</Link>
               </div>
             </div>

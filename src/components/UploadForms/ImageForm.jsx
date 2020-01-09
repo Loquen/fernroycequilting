@@ -28,6 +28,10 @@ class ImageForm extends Component {
     this.setState({show: true})
   }
 
+  isFormInvalid() {
+    return !(this.state.url && this.state.category && this.state.name);
+  }
+
   render(){
     return (
       <>
@@ -75,7 +79,13 @@ class ImageForm extends Component {
             </div>
             <div className='form-group'>
               <div className='col-sm-12 text-center'>
-                <Button className='btn btn-default' type='submit'>Upload</Button>&nbsp;&nbsp;&nbsp;
+                <Button 
+                  className='btn btn-default' 
+                  type='submit'
+                  disabled={this.isFormInvalid()}
+                >
+                  Upload
+                </Button>&nbsp;&nbsp;&nbsp;
                 <Link to='/'>Cancel</Link>
               </div>
             </div>

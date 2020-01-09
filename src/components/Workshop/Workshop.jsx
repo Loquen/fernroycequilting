@@ -1,9 +1,10 @@
 import React from 'react';
+import './Workshop.css';
 
 const Workshops = (props) => {
   return (
-    <div>
-      <img src={props.url} alt="Workshop"/>
+    <div className='containers'>
+      <img src={props.url} alt='Workshop'/>
       <p>{props.details}</p>
     </div>
   );
