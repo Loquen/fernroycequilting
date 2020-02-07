@@ -1,11 +1,25 @@
 .footer {
   background-color: #c9c5be;
-  margin-top: auto;
+  margin-top: 100px;
   display: flex;
-  position:fixed;
+  position: relative;
   bottom:0;
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  height: 100px;
+  height: 200px;
 }
+
+.insta {
+  max-height: 100%;
+  /* width: 150px; */
+}
+
+.insta img {
+  width: 150px;
+}
+
+.subscribe input {
+  margin-right: 25px;
+}
+
