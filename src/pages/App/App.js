@@ -9,6 +9,7 @@ import EventPage from '../EventPage/EventPage';
 import GalleryPage from '../GalleryPage/GalleryPage';
 import LecturePage from '../LecturePage/LecturePage';
 import NavBar from '../../components/NavBar/NavBar';
+import Footer from '../../components/Footer/Footer';
 import UploadPage from '../UploadPage/UploadPage';
 import './App.css';
 
@@ -76,7 +77,7 @@ class App extends Component {
               <Redirect to='/login' />
           }/>
         </Switch>
-
+        <Footer />
       </div>
     );
   }

@@ -9,13 +9,10 @@ const NavBar = (props) => {
         <Nav.Link href='' className='NavBar-link justify-content-end' onClick={props.handleLogout}>L O G  O U T</Nav.Link>
       </>
     :
-      <>
-        <Nav.Link href='/login' className='NavBar-link'>L O G  I N</Nav.Link>
-        <Nav.Link href='/signup' className='NavBar-link'>S I G N  U P</Nav.Link>
-      </>
+      null
 
   return (
-    <Navbar bg='light' variant='light'>
+    <Navbar bg='light' variant='light' className='navbar-custom'>
       <Nav activeKey={props.location.pathname} > 
       <Navbar.Brand href='/' className='NavBar-link'>
         {/* <img
