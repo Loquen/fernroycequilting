@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
+import contactService from '../../utils/contactService';
 
 class ContactForm extends Component {
 
@@ -21,7 +22,25 @@ class ContactForm extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(this.state.email, this.state.name, this.state.subject, this.state.message);
+    // Call Service to send email 
+    await contactService.sendEmail(this.state.name, this.state.email, this.state.subject, this.state.message)
+    // .then((response)=>{
+    //   if (response.data.status === 'success'){
+    //     alert("Message Sent."); 
+    //     this.resetForm()
+    //   }else if(response.data.status === 'fail'){
+    //     alert("Message failed to send.")
+    //   }
+    // })
+  }
+
+  resetForm(){
+     this.setState({
+       name: '',
+       email: '',
+       subject: '',
+       message: ''
+     });
   }
 
   isFormInvalid() {

@@ -12,7 +12,7 @@ const NavBar = (props) => {
       null
 
   return (
-    <Navbar bg='light' variant='light' className='navbar-custom'>
+    <Navbar bg='transparent' variant='light' className='navbar-custom'>
       <Nav activeKey={props.location.pathname} > 
       <Navbar.Brand href='/' className='NavBar-link'>
         {/* <img
@@ -22,7 +22,7 @@ const NavBar = (props) => {
           height='20'
           className='d-inline-block align-top'
         />&nbsp;&nbsp; */}
-        {'F R Q '}
+        {'Fern Royce Quilting '}
       </Navbar.Brand>
       <Nav.Link href='/' className='NavBar-link'>A B O U T</Nav.Link>
       <Nav.Link href='/contact' className='NavBar-link'>C O N T A C T</Nav.Link>

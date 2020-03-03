@@ -15,7 +15,6 @@ const ContactPage = () => {
       </Jumbotron>
       <ContactForm/>
       <hr/>
-      <SubscribeForm/>
     </Container>
   );
 }
