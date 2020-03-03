@@ -24,14 +24,16 @@ class ContactForm extends Component {
     e.preventDefault();
     // Call Service to send email 
     await contactService.sendEmail(this.state.name, this.state.email, this.state.subject, this.state.message)
-    // .then((response)=>{
-    //   if (response.data.status === 'success'){
-    //     alert("Message Sent."); 
-    //     this.resetForm()
-    //   }else if(response.data.status === 'fail'){
-    //     alert("Message failed to send.")
-    //   }
-    // })
+    
+    .then((response)=>{
+      console.log(response);
+      // if (response.data.status === 'success'){
+      //   alert("Message Sent."); 
+      //   this.resetForm()
+      // }else if(response.data.status === 'fail'){
+      //   alert("Message failed to send.")
+      // }
+    })
   }
 
   resetForm(){
