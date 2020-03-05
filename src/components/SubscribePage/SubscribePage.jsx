@@ -5,9 +5,16 @@ class SubscribePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      emailValue: '',
-      nameValue: ''
+      EMAIL: '',
+      FNAME: ''
     };
+  }
+
+  handleChange = (e) => {
+    this.setState({
+      // Using ES2015 Computed Property Names
+      [e.target.name]: e.target.value
+    });
   }
 
   render() {
@@ -33,10 +40,8 @@ class SubscribePage extends React.Component {
           type='email'
           name='EMAIL'
           id='MERGE0'
-          value={this.state.emailValue}
-          onChange={e => {
-            this.setState({ emailValue: e.target.value });
-          }}
+          value={this.state.EMAIL}
+          onChange={this.handleChange}
           autoCapitalize='off'
           autoCorrect='off'
         />
@@ -47,10 +52,8 @@ class SubscribePage extends React.Component {
           type='text'
           name='FNAME'
           id='MERGE1'
-          value={this.state.nameValue}
-          onChange={e => {
-            this.setState({ nameValue: e.target.value });
-          }}
+          value={this.state.NAME}
+          onChange={this.handleChange}
         />
         <input
           type='submit'
@@ -66,6 +69,7 @@ class SubscribePage extends React.Component {
         >
           <label htmlFor='b_name'>Name: </label>
           <input
+            readOnly
             type='text'
             name='b_name'
             tabIndex='-1'
@@ -76,6 +80,7 @@ class SubscribePage extends React.Component {
 
           <label htmlFor='b_email'>Email: </label>
           <input
+            readOnly
             type='email'
             name='b_email'
             tabIndex='-1'
@@ -86,6 +91,7 @@ class SubscribePage extends React.Component {
 
           <label htmlFor='b_comment'>Comment: </label>
           <textarea
+            readOnly
             name='b_comment'
             tabIndex='-1'
             placeholder='Please comment'

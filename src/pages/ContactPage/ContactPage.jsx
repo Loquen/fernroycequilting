@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Jumbotron } from 'react-bootstrap';
 import ContactForm from '../../components/ContactForm/ContactForm';
-import SubscribeForm from '../../components/SubscribeForm/SubscribeForm';
 
 const ContactPage = () => {
   return (
