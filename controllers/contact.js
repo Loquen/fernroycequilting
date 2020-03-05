@@ -4,6 +4,11 @@ module.exports = {
   sendEmail
 };
 
+// https://stackoverflow.com/questions/19877246/nodemailer-with-gmail-and-nodejs
+// See scipilots answer for turning on 2FA and then using 
+// alternative app password instead of main password
+
+
 // Send user's email 
 async function sendEmail(req, res) {
   // 1. Create a Nodemailer transporter using either SMTP or some other transport mechanism

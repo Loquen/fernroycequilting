@@ -12,7 +12,7 @@ const NavBar = (props) => {
       null
 
   return (
-    <Navbar bg='transparent' variant='light' className='navbar-custom'>
+    <Navbar variant='light' className='navbar-custom sticky-top'>
       <Nav activeKey={props.location.pathname} > 
       <Navbar.Brand href='/' className='NavBar-link'>
         {/* <img
@@ -26,7 +26,6 @@ const NavBar = (props) => {
       </Navbar.Brand>
       <Nav.Link href='/' className='NavBar-link'>A B O U T</Nav.Link>
       <Nav.Link href='/contact' className='NavBar-link'>C O N T A C T</Nav.Link>
-      <Nav.Link href='/gallery' className='NavBar-link'>G A L L E R Y</Nav.Link>
       <Nav.Link href='/lecture' className='NavBar-link'>L E C T U R E S</Nav.Link>
       <Nav.Link href='/event' className='NavBar-link'>E V E N T S</Nav.Link>
       {nav}

@@ -18,7 +18,6 @@ app.use(express.static(path.join(__dirname, 'build')));
 /**************** A P I  R O U T E S ******************/ 
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/events', require('./routes/api/events'));
-app.use('/api/images', require('./routes/api/images'));
 app.use('/api/workshops', require('./routes/api/workshops'));
 app.use('/api/contact', require('./routes/api/contact'));
 
