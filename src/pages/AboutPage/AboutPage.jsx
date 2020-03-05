@@ -12,11 +12,14 @@ const AboutPage = () => {
       <div>
         <Row>
           <Col>
-            <h1 className='title'>About Me</h1>
+            <h1>About Me</h1>
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col className='pb-2'>
+            <img src="https://placebear.com/g/300/300" alt="place bear"/>
+          </Col>
+          <Col xs={8}>
             <p>
             I was born and raised in Northern California, surrounded by sewing, textiles and quilts.
             </p>
@@ -30,13 +33,6 @@ const AboutPage = () => {
               for $12.50 when I was 10 and I’ve been sewing ever since – although now 
               I use an electric sewing machine.
             </p>
-          </Col>
-          <Col>
-            <img src="https://placebear.com/g/300/300" alt="place bear"/>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
             <p>
               My sisters will be the first to tell you that, as much as I loved fabric, 
               I had a very difficult time cutting into it. My younger sister did not 
@@ -44,6 +40,10 @@ const AboutPage = () => {
               I was still “petting” my fabric. She, of course, thinks it’s quite funny 
               that I now cut up fabric as a living!
             </p>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
             <p>
               I took my first quilting class in 1995 at New Pieces in Berkeley with 
               Johyne Geran. One of her opening statements was “Once you start quilting 
