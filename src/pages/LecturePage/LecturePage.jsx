@@ -16,9 +16,7 @@ class LecturePage extends Component {
   }
 
   async componentDidMount() {
-    const workshops = await workshopService.getAll();
-
-    this.setState({ workshops: workshops });
+    this.getAllWorkshops();
   }
 
   handleDelete = async (e, id) => {
@@ -27,10 +25,6 @@ class LecturePage extends Component {
     this.getAllWorkshops();
   }
 
-  handleUpdate = (e, id) => {
-    console.log('update', id)
-  }
-  
   render(){
     return (
       <Container>
@@ -141,7 +135,6 @@ class LecturePage extends Component {
             details={workshop.details}
             user={this.props.user}
             handleDelete={this.handleDelete}
-            handleUpdate={this.handleUpdate}
           />
         )}
         <div><em>

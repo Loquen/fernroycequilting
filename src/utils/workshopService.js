@@ -29,11 +29,6 @@ function create(title, url, image_text, details){
   return fetch(`${BASE_URL}`, options).then(res => res.json());
 }
 
-// Send PUT request to DB and return with Updated event
-function update(id) {
-
-}
-
 function deleteWorkshop(id) {
   const options = {
     method: 'DELETE',
@@ -47,6 +42,5 @@ function deleteWorkshop(id) {
 export default {
   getAll,
   create,
-  update,
   deleteWorkshop
 };
