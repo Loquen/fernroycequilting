@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.spacer {
+  margin-bottom: 50px;
+}
+
+.description {
+  align-self: center;
+}
+
 .App-logo {
   height: 40vmin;
 }

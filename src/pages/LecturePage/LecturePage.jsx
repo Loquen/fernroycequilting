@@ -130,17 +130,20 @@ class LecturePage extends Component {
         <Alert show={this.state.show} variant='success'>
           Workshop successfully deleted
         </Alert>
-        {this.state.workshops.map((workshop, idx) => 
-          <Workshop 
-            key={idx}
-            id={workshop._id}
-            title={workshop.title}
-            url={workshop.url}
-            details={workshop.details}
-            user={this.props.user}
-            handleDelete={this.handleDelete}
-          />
-        )}
+        {this.state.workshops.length > 0 ? 
+          this.state.workshops.map((workshop, idx) => 
+            <Workshop 
+              key={idx}
+              id={workshop._id}
+              title={workshop.title}
+              url={workshop.url}
+              details={workshop.details}
+              user={this.props.user}
+              handleDelete={this.handleDelete}
+            />
+          )
+          : <h3 className='text-danger'>No Workshops Currently Added</h3>
+        }
         <div><em>
 
         <hr/>

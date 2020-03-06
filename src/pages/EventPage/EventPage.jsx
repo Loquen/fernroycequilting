@@ -33,24 +33,27 @@ class EventPage extends Component {
     return (
       <Container>
         <Jumbotron>
-          <h1 className='title'>Events!</h1>
+          <h1 className='title'>Upcoming Events!</h1>
         </Jumbotron>
         <Alert show={this.state.show} variant='success'>
           Event successfully deleted
         </Alert>
-        {this.state.events.map((event, idx) => 
-          <Event 
-            key={idx}
-            id={event._id}
-            name={event.name}
-            url={event.url}
-            date={event.date}
-            location={event.location}
-            details={event.details}
-            user={this.props.user}
-            handleDelete={this.handleDelete}
-          />
-        )}
+        
+        {this.state.events.length > 0 ? 
+          this.state.events.map((event, idx) => 
+            <Event 
+              key={idx}
+              id={event._id}
+              name={event.name}
+              url={event.url}
+              date={event.date}
+              location={event.location}
+              details={event.details}
+              user={this.props.user}
+              handleDelete={this.handleDelete}
+            />
+          ) : <h3 className='text-danger'>No Events Currently Added</h3>
+        }
       </Container>
     );
   }
