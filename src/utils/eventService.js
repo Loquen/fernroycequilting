@@ -30,13 +30,18 @@ function create(name, url, date, location, details){
   return fetch(`${BASE_URL}`, options).then(res => res.json());
 }
 
-// Send PUT request to DB and return with Updated event
-function update() {
-
+function deleteEvent(id){
+  const options = {
+    method: 'DELETE',
+    headers: {
+      'Authorization': 'Bearer ' + tokenService.getToken()
+    }
+  };
+  return fetch(`${BASE_URL}${id}`, options).then(res => res.json());
 }
 
 export default {
   getAll,
   create,
-  update
+  deleteEvent
 };

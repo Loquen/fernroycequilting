@@ -12,15 +12,7 @@ const Workshops = ({id, title, url, details, user, handleDelete}) => {
         <Col className='workshop-description'>
           <h2>{title}</h2>
           <p>{details}</p>
-          {
-            user ?
-            (
-              <div>
-                <Button onClick={(e) => handleDelete(e, id)}>Delete</Button>
-              </div>
-            )
-            : null
-          }
+          { user ? <Button onClick={(e) => handleDelete(e, id)}>Delete</Button> : null }
         </Col>
       </Row>
     </div>

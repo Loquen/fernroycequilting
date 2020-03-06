@@ -59,7 +59,9 @@ class App extends Component {
             <ContactPage />
           }/>
           <Route exact path='/event' render={() => 
-            <EventPage />
+            <EventPage 
+              user={this.state.user}
+            />
           }/>
           <Route exact path='/lecture' render={() => 
             <LecturePage 

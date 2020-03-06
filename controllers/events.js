@@ -4,7 +4,7 @@ const Event = require('../models/event');
 module.exports = {
   getAllEvents,
   create,
-  update,
+  deleteEvent,
 };
 
 // Return All Events
@@ -25,6 +25,10 @@ async function create(req, res) {
 }
 
 // Edit Existing Event
-async function update(req, res) {
-
+async function deleteEvent(req, res) {
+  Event.deleteOne({ '_id':req.params.id }, function(err, obj) {
+    if (err) throw err;
+    console.log("1 event deleted");
+    return res.json('success');
+  })
 }

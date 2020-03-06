@@ -1,28 +1,29 @@
 import React, { Component } from 'react';
-import { Container, Jumbotron } from 'react-bootstrap';
+import { Container, Jumbotron, Alert } from 'react-bootstrap';
 import Workshop from '../../components/Workshop/Workshop';
 import workshopService from '../../utils/workshopService';
 
 class LecturePage extends Component {
 
   state = {
-    workshops: []
+    workshops: [],
+    show: false
   };
 
-  async getAllWorkshops() {
+  async getAllWorkshops(show) {
     const workshops = await workshopService.getAll();
 
-    this.setState({ workshops: workshops });
+    this.setState({ workshops, show });
   }
 
   async componentDidMount() {
-    this.getAllWorkshops();
+    this.getAllWorkshops(false);
   }
 
   handleDelete = async (e, id) => {
     await workshopService.deleteWorkshop(id);
 
-    this.getAllWorkshops();
+    this.getAllWorkshops(true);
   }
 
   render(){
@@ -126,6 +127,9 @@ class LecturePage extends Component {
             </p>
           </h4>
         </div>
+        <Alert show={this.state.show} variant='success'>
+          Workshop successfully deleted
+        </Alert>
         {this.state.workshops.map((workshop, idx) => 
           <Workshop 
             key={idx}
