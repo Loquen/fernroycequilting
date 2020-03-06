@@ -9,6 +9,12 @@ class LecturePage extends Component {
     workshops: []
   };
 
+  async getAllWorkshops() {
+    const workshops = await workshopService.getAll();
+
+    this.setState({ workshops: workshops });
+  }
+
   async componentDidMount() {
     const workshops = await workshopService.getAll();
 
@@ -17,6 +23,8 @@ class LecturePage extends Component {
 
   handleDelete = async (e, id) => {
     await workshopService.deleteWorkshop(id);
+
+    this.getAllWorkshops();
   }
 
   handleUpdate = (e, id) => {

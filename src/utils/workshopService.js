@@ -35,7 +35,13 @@ function update(id) {
 }
 
 function deleteWorkshop(id) {
-  console.log(id);
+  const options = {
+    method: 'DELETE',
+    headers: {
+      'Authorization': 'Bearer ' + tokenService.getToken()
+    }
+  };
+  return fetch(`${BASE_URL}${id}`, options).then(res => res.json());
 }
 
 export default {

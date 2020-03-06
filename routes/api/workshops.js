@@ -7,6 +7,7 @@ const workshopsCtrl = require('../../controllers/workshops');
 router.use(require('../../config/auth'));
 router.get('/', workshopsCtrl.getAllWorkshops);
 router.post('/', checkAuth, workshopsCtrl.create);
+router.delete('/:id', checkAuth, workshopsCtrl.deleteWorkshop);
 // router.put('/:id', checkAuth, eventsCtrl.edit);
 
 /*********** H E L P E R S *********/
