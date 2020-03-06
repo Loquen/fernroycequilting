@@ -14,6 +14,14 @@ class LecturePage extends Component {
 
     this.setState({ workshops: workshops });
   }
+
+  handleDelete = async (e, id) => {
+    await workshopService.deleteWorkshop(id);
+  }
+
+  handleUpdate = (e, id) => {
+    console.log('update', id)
+  }
   
   render(){
     return (
@@ -119,9 +127,13 @@ class LecturePage extends Component {
         {this.state.workshops.map((workshop, idx) => 
           <Workshop 
             key={idx}
+            id={workshop._id}
             title={workshop.title}
             url={workshop.url}
             details={workshop.details}
+            user={this.props.user}
+            handleDelete={this.handleDelete}
+            handleUpdate={this.handleUpdate}
           />
         )}
         <div><em>

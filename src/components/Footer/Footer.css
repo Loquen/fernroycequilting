@@ -17,9 +17,23 @@
 
 .insta img {
   width: 150px;
+  margin: 0 20px;
 }
 
 .subscribe input {
   margin-right: 25px;
+}
+
+.social {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+.social i {
+  margin: 0 10px;
 }
 

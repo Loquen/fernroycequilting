@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Jumbotron, Tabs, Tab } from 'react-bootstrap';
 import EventForm from '../../components/UploadForms/EventForm';
 import WorkshopForm from '../../components/UploadForms/WorkshopForm';
-import ImageForm from '../../components/UploadForms/ImageForm';
 
 const UploadPage = () => {
   return (
@@ -17,9 +16,6 @@ const UploadPage = () => {
         </Tab>
         <Tab eventKey="workshop" title="Workshop">
           <WorkshopForm />
-        </Tab>
-        <Tab eventKey="image" title="Image">
-          <ImageForm />
         </Tab>
       </Tabs>
     </Container>

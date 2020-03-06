@@ -7,15 +7,22 @@ function Footer(props) {
     <div className='footer'>
       <div className='insta'>
         <a href='https://instagram.com/fern_royce'>
-          <img src="four_patch.jpg" alt="four patch quilt"/>  
-          <img src="american_quilter.jpg" alt="American quilter book"/>  
-          <img src="pastel_blue.jpg" alt="pastel blue quilt"/>  
-          <img src="pin_cushion.jpg" alt="pin cushion"/>  
+          <img src='four_patch.jpg' alt='four patch quilt'/>  
+          <img src='american_quilter.jpg' alt='American quilter book'/>  
+          <img src='pastel_blue.jpg' alt='pastel blue quilt'/>  
+          <img src='pin_cushion.jpg' alt='pin cushion'/>  
         </a>
       </div>
-      <div className='subscribe'><div>
-        <SubscribePage />
+      <div className='social'>
+        <h4>Follow me on social media:</h4>
+        <div>
+          <a href='https://www.pinterest.com/fernroyce/'><i className='fa fa-pinterest fa-3x'/></a>
+          <a href='https://www.facebook.com/fernroycequilts/'><i className='fa fa-facebook fa-3x' /></a>
+          <a href='https://www.instagram.com/fern_royce'><i className='fa fa-instagram fa-3x'/></a>
+        </div>
       </div>
+      <div className='subscribe'>
+        <SubscribePage />
       </div>
     </div>
   );

@@ -1,11 +1,22 @@
 import React from 'react';
 import './Workshop.css';
+import { Button } from 'react-bootstrap';
 
-const Workshops = (props) => {
+const Workshops = ({id, title, url, details, user, handleDelete, handleUpdate}) => {
   return (
     <div className='containers'>
-      <img src={props.url} alt='Workshop'/>
-      <p>{props.details}</p>
+      <img src={url} alt='Workshop'/>
+      <p>{details}</p>
+      {
+        user ?
+        (
+          <div>
+            <Button onClick={(e) => handleDelete(e, id)}>Delete</Button>
+            <Button onClick={(e) => handleUpdate(e, id)}>Update</Button>
+          </div>
+        )
+        : null
+      }
     </div>
   );
 }

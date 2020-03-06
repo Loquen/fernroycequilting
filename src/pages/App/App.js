@@ -6,7 +6,6 @@ import LoginPage from '../LoginPage/LoginPage';
 import AboutPage from '../AboutPage/AboutPage';
 import ContactPage from '../ContactPage/ContactPage';
 import EventPage from '../EventPage/EventPage';
-import GalleryPage from '../GalleryPage/GalleryPage';
 import LecturePage from '../LecturePage/LecturePage';
 import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
@@ -62,11 +61,10 @@ class App extends Component {
           <Route exact path='/event' render={() => 
             <EventPage />
           }/>
-          <Route exact path='/gallery' render={() => 
-            <GalleryPage />
-          }/>
           <Route exact path='/lecture' render={() => 
-            <LecturePage />
+            <LecturePage 
+              user={this.state.user}
+            />
           }/>
           <Route exact path='/upload' render={() => 
             userService.getUser() ?           

@@ -69,7 +69,7 @@ class EventForm extends Component {
                 <input 
                   type='text' 
                   className='form-control' 
-                  placeholder='Image URL' 
+                  placeholder='Image File Name' 
                   value={this.state.url} 
                   name='url' 
                   onChange={this.handleChange} 

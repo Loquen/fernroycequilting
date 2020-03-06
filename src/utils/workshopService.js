@@ -30,12 +30,17 @@ function create(title, url, image_text, details){
 }
 
 // Send PUT request to DB and return with Updated event
-function update() {
+function update(id) {
 
+}
+
+function deleteWorkshop(id) {
+  console.log(id);
 }
 
 export default {
   getAll,
   create,
-  update
+  update,
+  deleteWorkshop
 };

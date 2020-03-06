@@ -33,7 +33,7 @@ class LoginPage extends Component {
   render() {
     return (
       <div className="LoginPage">
-        <header><h1>Log In</h1></header>
+        <header><h1 className='title'>Log In</h1></header>
         <Container>        
           <form className="form-horizontal" onSubmit={this.handleSubmit} >
             <div className="form-group">
