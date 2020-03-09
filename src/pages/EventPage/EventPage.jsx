@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Jumbotron, Alert } from 'react-bootstrap';
 import eventService from '../../utils/eventService';
 import Event from '../../components/Event/Event';
+import { Header } from '../../components/helpers/Header';
 
 class EventPage extends Component {
 
@@ -32,9 +33,9 @@ class EventPage extends Component {
   render(){
     return (
       <Container>
-        <Jumbotron>
-          <h1 className='title'>Upcoming Events!</h1>
-        </Jumbotron>
+        <Header
+          title='Upcoming Events!'
+        />
         <Alert show={this.state.show} variant='success'>
           Event successfully deleted
         </Alert>

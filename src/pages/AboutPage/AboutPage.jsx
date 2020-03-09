@@ -1,13 +1,14 @@
 import React from 'react';
 import { Container, Jumbotron, Button, Row, Col } from 'react-bootstrap';
+import { Header } from '../../components/helpers/Header';
 import './AboutPage.css'
 
 const AboutPage = () => {
   return (
     <Container>
-      <Jumbotron>
-        <h1 className='title'>Welcome to Fern Royce Quilting!</h1>
-      </Jumbotron>
+      <Header 
+        title='Welcome to Fern Royce Quilting'
+      />
 
       <div>
         <Row>
@@ -74,10 +75,9 @@ const AboutPage = () => {
         </Row>
       </div>
       <div className='about-btn-group'>
-        {/* <Link className='btn btn-default' to='/settings'>Subscribe!</Link> */}
-        <Button className='btn btn-default' href='/contact'>Contact Me!</Button>
-        <Button className='btn btn-default' href='/event'>Events!</Button>
-        <Button className='btn btn-default' href='/lecture'>Lectures!</Button>
+        <Button href='/contact'>Contact Me!</Button>
+        <Button href='/event'>Events!</Button>
+        <Button href='/lecture'>Lectures!</Button>
       </div>
     </Container>
   );

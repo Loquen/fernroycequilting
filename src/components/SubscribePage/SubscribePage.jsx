@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import './SubscribePage.css';
 
 class SubscribePage extends React.Component {
@@ -55,13 +56,19 @@ class SubscribePage extends React.Component {
           value={this.state.NAME}
           onChange={this.handleChange}
         />
-        <input
+        {/* <input
           type='submit'
           value='Subscribe'
           name='subscribe'
           id='mc-embedded-subscribe'
           className='subscribe-button'
-        />
+        /> */}
+        <Button 
+          type='submit'
+          name='subscribe'
+          id='mc-embedded-subscribe'
+          className='subscribe-button'
+        >Subscribe</Button>
         <div
           style={{ position: 'absolute', left: '-5000px' }}
           aria-hidden='true'

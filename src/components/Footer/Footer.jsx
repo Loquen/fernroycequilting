@@ -16,9 +16,9 @@ function Footer(props) {
       <div className='social'>
         <h4>Follow me on social media:</h4>
         <div>
-          <a href='https://www.pinterest.com/fernroyce/'><i className='fa fa-pinterest fa-3x'/></a>
-          <a href='https://www.facebook.com/fernroycequilts/'><i className='fa fa-facebook fa-3x' /></a>
-          <a href='https://www.instagram.com/fern_royce'><i className='fa fa-instagram fa-3x'/></a>
+          <a className='App-link' href='https://www.pinterest.com/fernroyce/'><i className='fa fa-pinterest fa-3x'/></a>
+          <a className='App-link' href='https://www.facebook.com/fernroycequilts/'><i className='fa fa-facebook fa-3x' /></a>
+          <a className='App-link' href='https://www.instagram.com/fern_royce'><i className='fa fa-instagram fa-3x'/></a>
         </div>
       </div>
       <div className='subscribe'>
