@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Jumbotron, Button, Row, Col } from 'react-bootstrap';
+import { Container, Button, Row, Col } from 'react-bootstrap';
 import { Header } from '../../components/helpers/Header';
 import './AboutPage.css'
 

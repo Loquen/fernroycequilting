@@ -9,6 +9,7 @@ class EventForm extends Component {
     name: '',
     url: '',
     date: '',
+    time: '',
     location: '',
     details: '',
     show: false,
@@ -26,6 +27,7 @@ class EventForm extends Component {
       this.state.name, 
       this.state.url, 
       this.state.date,
+      this.state.time,
       this.state.location,
       this.state.details
     );
@@ -34,13 +36,21 @@ class EventForm extends Component {
       name: '',
       url: '',
       date: '',
+      time: '',
       location: '',
       details: ''
     })
   }
 
   isFormInvalid() {
-    return !(this.state.name && this.state.url && this.state.date && this.state.location && this.state.details);
+    return !(
+      this.state.name && 
+      this.state.url && 
+      this.state.date && 
+      this.state.time && 
+      this.state.location && 
+      this.state.details
+    );
   }
 
   render(){
@@ -84,6 +94,18 @@ class EventForm extends Component {
                   placeholder='Date' 
                   value={this.state.date} 
                   name='date' 
+                  onChange={this.handleChange} 
+                />
+              </div>
+            </div>
+            <div className='form-group'>
+              <div className='col-sm-12'>
+                <input 
+                  type='time' 
+                  className='form-control' 
+                  placeholder='Time' 
+                  value={this.state.time} 
+                  name='time' 
                   onChange={this.handleChange} 
                 />
               </div>

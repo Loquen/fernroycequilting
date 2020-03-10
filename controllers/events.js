@@ -16,6 +16,7 @@ async function getAllEvents(req, res) {
 // Add New Event
 async function create(req, res) {
   let event = new Event(req.body);
+
   event.save(function(err){
     if(err) {
       return res.json({ error: err });

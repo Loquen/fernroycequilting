@@ -9,7 +9,7 @@ function getAll() {
 }
 
 // Send POST request to DB and return with Success or Failure JSON message
-function create(name, url, date, location, details){
+function create(name, url, date, time, location, details){
   const options = {
     method: 'POST',
     headers: {
@@ -22,6 +22,7 @@ function create(name, url, date, location, details){
       name,
       url,
       date,
+      time,
       location,
       details
     })

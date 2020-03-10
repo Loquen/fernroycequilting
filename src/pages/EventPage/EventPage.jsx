@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Jumbotron, Alert } from 'react-bootstrap';
+import { Container, Alert } from 'react-bootstrap';
 import eventService from '../../utils/eventService';
 import Event from '../../components/Event/Event';
 import { Header } from '../../components/helpers/Header';
@@ -48,6 +48,7 @@ class EventPage extends Component {
               name={event.name}
               url={event.url}
               date={event.date}
+              time={event.time}
               location={event.location}
               details={event.details}
               user={this.props.user}

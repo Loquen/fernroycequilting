@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Jumbotron } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import ContactForm from '../../components/ContactForm/ContactForm';
 import { Header } from '../../components/helpers/Header';
 
