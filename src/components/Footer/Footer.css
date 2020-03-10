@@ -37,3 +37,9 @@
   margin: 0 10px;
 }
 
+.copyright {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 5px;
+  background-color: #c9c5be;
+}
