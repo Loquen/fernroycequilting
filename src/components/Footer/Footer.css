@@ -43,3 +43,8 @@
   padding-bottom: 5px;
   background-color: #c9c5be;
 }
+
+.copyright a {
+  text-decoration: none;
+  color: #282c34;
+}
