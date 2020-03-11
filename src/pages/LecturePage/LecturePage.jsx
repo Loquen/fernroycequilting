@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { Container, Jumbotron, Alert } from 'react-bootstrap';
 import Workshop from '../../components/Workshop/Workshop';
 import workshopService from '../../utils/workshopService';
@@ -24,6 +24,10 @@ class LecturePage extends Component {
     await workshopService.deleteWorkshop(id);
 
     this.getAllWorkshops(true);
+  }
+
+  handleClose = () => {
+    this.setState({show: false});
   }
 
   render(){
@@ -127,7 +131,7 @@ class LecturePage extends Component {
             </p>
           </h4>
         </div>
-        <Alert show={this.state.show} variant='success'>
+        <Alert show={this.state.show} onClose={this.handleClose} dismissible variant='success'>
           Workshop successfully deleted
         </Alert>
         {this.state.workshops.length > 0 ? 

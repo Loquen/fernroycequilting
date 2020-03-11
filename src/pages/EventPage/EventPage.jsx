@@ -30,13 +30,17 @@ class EventPage extends Component {
     this.getAllEvents(true);
   }
 
+  handleClose = () => {
+    this.setState({show: false});
+  }
+
   render(){
     return (
       <Container>
         <Header
           title='Upcoming Events!'
         />
-        <Alert show={this.state.show} variant='success'>
+        <Alert show={this.state.show} onClose={this.handleClose} dismissible variant='success'>
           Event successfully deleted
         </Alert>
         

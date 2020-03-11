@@ -53,11 +53,15 @@ class EventForm extends Component {
     );
   }
 
+  handleClose = () => {
+    this.setState({show: false});
+  }
+
   render(){
     return (
       <>
         <header><h1 className='title'>Create A New Event</h1></header>
-        <Alert show={this.state.show} variant='success'>
+        <Alert show={this.state.show} onClose={this.handleClose} dismissible variant='success'>
           Event successfully uploaded
         </Alert>
         <Container>        

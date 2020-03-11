@@ -40,11 +40,15 @@ class WorkshopForm extends Component {
     return !(this.state.title && this.state.url && this.state.image_text && this.state.details);
   }
 
+  handleClose = () => {
+    this.setState({show: false});
+  }
+
   render(){
     return (
       <>
         <header><h1 className='title'>Create A New Workshop</h1></header>
-        <Alert show={this.state.show} variant='success'>
+        <Alert show={this.state.show} onClose={this.handleClose} dismissible variant='success'>
           Workshop successfully uploaded
         </Alert>
         <Container>        
