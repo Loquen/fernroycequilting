@@ -17,10 +17,10 @@ const Event = ({id, name, url, date, time, location, details, user, handleDelete
 
   return (
     <Row className='spacer'>
-      <Col>
-        <img src={url} alt="Event"/>
+      <Col md={4} >
+        <img className='image-size' src={url} alt="Event"/>
       </Col>
-      <Col className='description'>
+      <Col md={8} className='description'>
         <h3>{name}</h3>
         <h5>{fdate} at {ftime}</h5>
         <h6>{location}</h6>

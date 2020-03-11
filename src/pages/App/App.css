@@ -45,3 +45,7 @@
   -ms-transition: all 1s ease;
   border-style: none;
 }
+
+.image-size {
+  max-width: 100%;
+}
