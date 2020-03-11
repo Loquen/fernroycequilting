@@ -1,5 +1,5 @@
-import React, { Component, useState } from 'react';
-import { Container, Jumbotron, Alert } from 'react-bootstrap';
+import React, { Component } from 'react';
+import { Container, Jumbotron, Alert, Row, Col, Card } from 'react-bootstrap';
 import Workshop from '../../components/Workshop/Workshop';
 import workshopService from '../../utils/workshopService';
 
@@ -148,29 +148,67 @@ class LecturePage extends Component {
           )
           : <h3 className='text-danger'>No Workshops Currently Added</h3>
         }
-        <div><em>
-
-        <hr/>
-        <h3>Student feedback:</h3>
-        <p>
-          “Fern’s classes are wonderfully energetic. She is a nurturing, 
-          supportive, knowledgeable and fun teacher.” RH
-        </p>
-        <p>
-          “I took Fern’s String Quilt class. Her directions are really 
-          helpful. She guided us through choosing colors, explained how 
-          different widths of fabric make the block more interesting, 
-          and taught us to relax and have fun creating our quilt. She 
-          has tips and tricks and works well with students from every 
-          level of experience. I highly recommend her as a teacher.” LM
-        </p>
-        <p>
-          “I love taking quilting classes from Fern. She can work with 
-          students of any skill level and has infinite patience. She is 
-          a skilled quilter and provides classes that move beyond 
-          ‘traditional’ quilting.” KB 
-        </p>
-        </em></div>
+        <div>
+          <hr/>
+          <h3 className='text-center'>What Students Are Saying...</h3>
+          <br />
+          <em><Row>
+            <Col>
+            <Card>
+              <Card.Body>
+                <blockquote className="blockquote mb-0">
+                  <p>
+                    {' '}
+                    Fern’s classes are wonderfully energetic. She is a nurturing, 
+                    supportive, knowledgeable and fun teacher.{' '}
+                  </p>
+                  <footer className="blockquote-footer">
+                    <cite title="Source Title">RH</cite>
+                  </footer>
+                </blockquote>
+              </Card.Body>
+            </Card>
+            </Col>
+            <Col>
+              <Card>
+                <Card.Body>
+                  <blockquote className="blockquote mb-0">
+                    <p>
+                      {' '}
+                      I took Fern’s String Quilt class. Her directions are really 
+                      helpful. She guided us through choosing colors, explained how 
+                      different widths of fabric make the block more interesting, 
+                      and taught us to relax and have fun creating our quilt. She 
+                      has tips and tricks and works well with students from every 
+                      level of experience. I highly recommend her as a teacher.{' '}
+                    </p>
+                    <footer className="blockquote-footer">
+                      <cite title="Source Title">LM</cite>
+                    </footer>
+                  </blockquote>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col>
+              <Card>
+                <Card.Body>
+                  <blockquote className="blockquote mb-0">
+                    <p>
+                      {' '}
+                      I love taking quilting classes from Fern. She can work with 
+                      students of any skill level and has infinite patience. She is 
+                      a skilled quilter and provides classes that move beyond 
+                      ‘traditional’ quilting.{' '}
+                    </p>
+                    <footer className="blockquote-footer">
+                      <cite title="Source Title">KB</cite>
+                    </footer>
+                  </blockquote>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row></em>
+        </div>
       </Container>
     );
   }
