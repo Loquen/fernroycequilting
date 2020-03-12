@@ -49,3 +49,8 @@
 .image-size {
   max-width: 100%;
 }
+
+#bootstrap-override .card-style {
+  background-color: #FFFAF2; /* #C9C5BE #FFDEA6 #806F53 #CCC8C2*/
+  text-align: center;
+}

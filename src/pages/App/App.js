@@ -33,7 +33,7 @@ class App extends Component {
 
   render(){
     return (
-      <div className="App">
+      <div className="App" id='bootstrap-override'>
         <NavBar 
           location={window.location.pathname}
           user={this.state.user}
