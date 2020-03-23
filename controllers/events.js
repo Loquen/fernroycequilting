@@ -9,7 +9,7 @@ module.exports = {
 
 // Return All Events
 async function getAllEvents(req, res) {
-  let events = await Event.find({});
+  let events = await Event.find({}).sort('date');
   return res.json(events);
 }
 
