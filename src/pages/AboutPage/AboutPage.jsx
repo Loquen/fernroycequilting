@@ -17,7 +17,7 @@ const AboutPage = () => {
           </Col>
         </Row>
         <Row>
-          <Col className='pb-2'>
+          <Col className='pb-5'>
             <img src="https://placebear.com/g/300/300" alt="place bear"/>
           </Col>
           <Col xs={8}>

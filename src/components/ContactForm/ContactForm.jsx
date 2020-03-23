@@ -51,6 +51,8 @@ class ContactForm extends Component {
 
   render() {
     return (
+      <div>
+      <p className='text-center'>Send me an email to schdule a lecture at your guild, local quilt store or just say hello!</p>
       <form className='form-horizontal' onSubmit={this.handleSubmit} >
         <div className='form-group'>
           <div className='col-sm-12'>
@@ -79,6 +81,7 @@ class ContactForm extends Component {
           </div>
         </div>
       </form>
+      </div>
     );
   }
 }

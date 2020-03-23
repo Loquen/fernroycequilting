@@ -1,5 +1,6 @@
 .title {
   text-align: center;
+  font-size: 3.5rem;
 }
 
 .spacer {
@@ -10,21 +11,6 @@
   align-self: center;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #282c34;
 }
@@ -32,12 +18,12 @@
 .btn-primary,
 .btn-primary:active,
 .btn-primary:visited {
-  background-color: #8064A2 !important;
+  background-color: #3471e2 !important;
   border-style: none !important;
 }
 
 .btn-primary:hover {
-  background-color: #594671 !important;
+  background-color: #0e44a7 !important;
   transition: all 1s ease;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
@@ -51,6 +37,11 @@
 }
 
 #bootstrap-override .card-style {
-  background-color: #FFFAF2; /* #C9C5BE #FFDEA6 #806F53 #CCC8C2*/
+  background-color: #EDE4D5; /*#C9C5BE  #FFFAF2 #FFDEA6 #806F53 #CCC8C2*/
+  /* #5465B3 #ABBAFF #91A5FF  tans: #B89E53 #FFE391 */
   text-align: center;
+}
+
+#bootstrap-override h1 {
+  font-weight: 200;
 }

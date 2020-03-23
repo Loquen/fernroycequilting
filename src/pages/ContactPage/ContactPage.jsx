@@ -8,7 +8,6 @@ const ContactPage = () => {
     <Container>
       <Header 
         title='Contact Me!'
-        body={'Send me an email to schdule a lecture at your guild, local quilt store or just say hello!' }
       />
       <ContactForm/>
       <hr/>
