@@ -4,7 +4,7 @@ import moment from 'moment';
 import './Event.css';
 
 const Event = ({id, name, url, date, time, location, details, user, handleDelete}) => {
-  const fdate = moment(date, moment.ISO_8601).format('MMMM Do, YYYY');
+  const fdate = moment(date).add(1, 'day').format('MMMM Do, YYYY');
   const hrMin = time.split(':');
   let ftime; 
 
