@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
+import { Button, Alert } from 'react-bootstrap';
 import contactService from '../../utils/contactService';
 
 class ContactForm extends Component {
@@ -9,7 +9,8 @@ class ContactForm extends Component {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
+    show: false
   };
 
   handleChange = (e) => {
@@ -27,6 +28,7 @@ class ContactForm extends Component {
     
     .then((response)=>{
       console.log(response);
+      this.setState({show: true});
       // if (response.data.status === 'success'){
       //   alert("Message Sent."); 
       //   this.resetForm()
@@ -49,10 +51,17 @@ class ContactForm extends Component {
     return !(this.state.name && this.state.email && this.state.subject && this.state.message);
   }
 
+  handleClose = () => {
+    this.setState({show: false});
+  }
+
   render() {
     return (
       <div>
       <p className='text-center'>Send me an email to schdule a lecture at your guild, local quilt store or just say hello!</p>
+      <Alert show={this.state.show} onClose={this.handleClose} dismissible variant='success'>
+        Message Successfully sent!
+      </Alert>
       <form className='form-horizontal' onSubmit={this.handleSubmit} >
         <div className='form-group'>
           <div className='col-sm-12'>
