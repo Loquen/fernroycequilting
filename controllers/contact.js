@@ -48,10 +48,10 @@ async function sendEmail(req, res) {
   
   // Set up message options
   let message = {
-    from: SENDER_EMAIL_ADDRESS, // for Google Auth
-    to: req.body.email, // list of receivers
+    from: req.body.email, // for Google Auth
+    to: SENDER_EMAIL_ADDRESS, // list of receivers
     subject: req.body.subject, // Subject line
-    text: req.body.message, // plain text body
+    text: req.body.message + '\n' + req.body.email, // plain text body
   }
 
   // Deliver the message object using the sendMail() method of transporter

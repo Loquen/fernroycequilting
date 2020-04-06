@@ -40,6 +40,7 @@
   background-color: #EDE4D5; /*#C9C5BE  #FFFAF2 #FFDEA6 #806F53 #CCC8C2*/
   /* #5465B3 #ABBAFF #91A5FF  tans: #B89E53 #FFE391 */
   text-align: center;
+  box-shadow: 5px 5px 2px rgba(211, 211, 211, 50%);
 }
 
 #bootstrap-override h1 {
