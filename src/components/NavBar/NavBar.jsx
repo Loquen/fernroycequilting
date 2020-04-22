@@ -12,8 +12,8 @@ const NavBar = (props) => {
       null
 
   return (
-    <Navbar variant='light' className='navbar-custom sticky-top'>
-      <Nav activeKey={props.location.pathname} > 
+    <Navbar variant='light' expand="md" className='navbar-custom sticky-top'>
+      {/* <Nav activeKey={props.location.pathname} >  */}
       <Navbar.Brand href='/' className='NavBar-link'>
         {/* <img
           alt='Sit Logo'
@@ -24,12 +24,18 @@ const NavBar = (props) => {
         />&nbsp;&nbsp; */}
         {'Fern Royce Quilting '}
       </Navbar.Brand>
-      <Nav.Link href='/' className='NavBar-link'>A B O U T</Nav.Link>
-      <Nav.Link href='/contact' className='NavBar-link'>C O N T A C T</Nav.Link>
-      <Nav.Link href='/lecture' className='NavBar-link'>L E C T U R E S</Nav.Link>
-      <Nav.Link href='/event' className='NavBar-link'>E V E N T S</Nav.Link>
-      {nav}
-      </Nav>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse>
+        <Nav className="mr-auto">
+          
+          <Nav.Link href='/' className='NavBar-link'>A B O U T</Nav.Link>
+          <Nav.Link href='/contact' className='NavBar-link'>C O N T A C T</Nav.Link>
+          <Nav.Link href='/lecture' className='NavBar-link'>L E C T U R E S</Nav.Link>
+          <Nav.Link href='/event' className='NavBar-link'>E V E N T S</Nav.Link>
+          {nav}
+        </Nav>
+      </Navbar.Collapse>
+      {/* </Nav> */}
     </Navbar>
   );
 };

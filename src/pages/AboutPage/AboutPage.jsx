@@ -13,14 +13,14 @@ const AboutPage = () => {
       <div>
         <Row>
           <Col>
-            <h1>About Me</h1>
+            <h1 className="text-justify-sm">About Me</h1>
           </Col>
         </Row>
         <Row>
-          <Col className='pb-5'>
-            <img src="fern_headshot.jpg" alt="Fern"/>
+          <Col className='pb-5 mx-auto d-block' >
+            <img id="fern-profile-pic" src="fern_headshot.jpg"  alt="Fern"/>
           </Col>
-          <Col xs={8}>
+          <Col md={8} xs={12}>
             <p>
             I was born and raised in Northern California, surrounded by sewing, textiles and quilts.
             </p>
