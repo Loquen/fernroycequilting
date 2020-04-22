@@ -27,7 +27,7 @@ function Footer(props) {
         </div>
       </div>
       <div className='copyright'>
-        © 2020 <a href='https://github.com'>Loquen Jones</a>
+        © 2020 <a href='https://github.com/Loquen'>Loquen Jones</a>
       </div>
     </div>
   );

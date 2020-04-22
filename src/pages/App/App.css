@@ -50,3 +50,9 @@
 #bootstrap-override .NavBar-link {
   color: rgb(60,60,60);
 }
+
+@media only screen and (max-width: 600px){
+  #bootstrap-override .card-style {
+    margin-bottom: 30px;
+  }
+}

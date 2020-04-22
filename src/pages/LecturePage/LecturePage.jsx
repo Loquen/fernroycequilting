@@ -71,7 +71,7 @@ class LecturePage extends Component {
           microphone, table for quilts and 2 helpers to hold quilts.
         </p>
         <Row>
-          <Col>
+          <Col xs={12} md={4}>
             <Card className='card-style'>
               <Card.Header>
                 <h4><em>Following the Inspiration</em></h4>
@@ -85,7 +85,7 @@ class LecturePage extends Component {
               </Card.Body>
             </Card>
           </Col>
-          <Col>
+          <Col xs={12} md={4}>
             <Card className='card-style'>
               <Card.Header>
                 <h4><em>One Thing Leads to Another</em></h4>
@@ -100,7 +100,7 @@ class LecturePage extends Component {
               </Card.Body>
             </Card>
           </Col>
-          <Col>
+          <Col xs={12} md={4}>
             <Card className='card-style'>
               <Card.Header>
                 <h4><em>Confessions of a Whole Cloth Quilter</em></h4>
@@ -180,23 +180,23 @@ class LecturePage extends Component {
           <h3 className='text-center'>What Students Are Saying...</h3>
           <br />
           <em><Row>
-            <Col>
-            <Card className='card-style'>
-              <Card.Body>
-                <blockquote className="blockquote mb-0">
-                  <p>
-                    {' '}
-                    Fern’s classes are wonderfully energetic. She is a nurturing, 
-                    supportive, knowledgeable and fun teacher.{' '}
-                  </p>
-                  <footer className="blockquote-footer">
-                    <cite title="Source Title">RH</cite>
-                  </footer>
-                </blockquote>
-              </Card.Body>
-            </Card>
+            <Col xs={12} md={4}>
+              <Card className='card-style'>
+                <Card.Body>
+                  <blockquote className="blockquote mb-0">
+                    <p>
+                      {' '}
+                      Fern’s classes are wonderfully energetic. She is a nurturing, 
+                      supportive, knowledgeable and fun teacher.{' '}
+                    </p>
+                    <footer className="blockquote-footer">
+                      <cite title="Source Title">RH</cite>
+                    </footer>
+                  </blockquote>
+                </Card.Body>
+              </Card>
             </Col>
-            <Col>
+            <Col xs={12} md={4}>
               <Card className='card-style'>
                 <Card.Body>
                   <blockquote className="blockquote mb-0">
@@ -216,7 +216,7 @@ class LecturePage extends Component {
                 </Card.Body>
               </Card>
             </Col>
-            <Col>
+            <Col xs={12} md={4}>
               <Card className='card-style'>
                 <Card.Body>
                   <blockquote className="blockquote mb-0">
