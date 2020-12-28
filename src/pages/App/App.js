@@ -4,6 +4,7 @@ import userService from '../../utils/userService';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import AboutPage from '../AboutPage/AboutPage';
+import HomePage from '../HomePage/HomePage';
 import ContactPage from '../ContactPage/ContactPage';
 import EventPage from '../EventPage/EventPage';
 import LecturePage from '../LecturePage/LecturePage';
@@ -34,6 +35,7 @@ class App extends Component {
   render(){
     return (
       <div className="App" id='bootstrap-override'>
+        <img className="banner-image" src="background.jpg" />
         <NavBar 
           location={window.location.pathname}
           user={this.state.user}
@@ -53,6 +55,9 @@ class App extends Component {
             />
           }/>
           <Route exact path='/' render={() => 
+            <HomePage />
+          }/>
+          <Route exact path='/about' render={() => 
             <AboutPage />
           }/>
           <Route exact path='/contact' render={() => 

@@ -7,15 +7,10 @@ const AboutPage = () => {
   return (
     <Container>
       <Header 
-        title='Welcome to Fern Royce Quilting'
+        title='About Me'
       />
 
       <div>
-        <Row>
-          <Col>
-            <h1 className="text-justify-sm">About Me</h1>
-          </Col>
-        </Row>
         <Row>
           <Col className='pb-5 mx-auto d-block' >
             <img id="fern-profile-pic" src="fern_headshot.jpg"  alt="Fern"/>

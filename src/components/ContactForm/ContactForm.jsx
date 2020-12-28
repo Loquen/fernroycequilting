@@ -58,7 +58,7 @@ class ContactForm extends Component {
   render() {
     return (
       <div>
-      <p className='text-center'>Send me an email to schdule a lecture at your guild, local quilt store or just say hello!</p>
+      <p className='text-center'>Send me an email to schedule a lecture at your guild, local quilt store or just to say hello!</p>
       <Alert show={this.state.show} onClose={this.handleClose} dismissible variant='success'>
         Message Successfully sent!
       </Alert>
