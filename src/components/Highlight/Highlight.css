@@ -1,0 +1,34 @@
+.NavBar-link {
+  margin: 5px 20px;
+  color: rgb(83,83,83);
+
+}
+
+.highlight {
+  font-size: 3rem;
+  background-color: #c9c5be;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0;
+}
+
+.highlight-text {
+  background-color: #d8d7d688;
+  padding: 1rem;
+}
+
+.highlight-custom {
+  background-color: #c9c5be;
+  /* #891021*/
+}
+/* change the brand and text color */
+.highlight-custom .highlight-brand,
+.highlight-custom .highlight-text {
+  color: rgb(83,83,83);
+}
+/* change the link color */
+.highlight-custom .highlight-nav .nav-link {
+  color: rgb(83, 83, 83);
+}
+
