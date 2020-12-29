@@ -37,7 +37,7 @@ class LecturePage extends Component {
         <Header
           title={'LECTURES and WORKSHOPS'}
         />
-        <Jumbotron>
+        {/* <Jumbotron>
           <p>
             Sewing is part of my DNA. I was drawn to textiles from a very early age and 
             learned to sew on a machine by age 10. I started quilting in 1995. I did not 
@@ -63,14 +63,14 @@ class LecturePage extends Component {
             encouraging and supporting my students as they birth their creative ideas. 
             It is a privilege to be part of this long tradition of women’s work.
           </p>
-        </Jumbotron>
+        </Jumbotron> */}
 
-        <h1>Lectures</h1>
+        <h1 className="pt-6">Lectures</h1>
         <p>
           A trunk show of quilts with stories. Supplies needed: a podium, 
           microphone, table for quilts and 2 helpers to hold quilts.
         </p>
-        <Row>
+        <Row className="my-md-5">
           <Col xs={12} md={4}>
             <Card className='card-style'>
               <Card.Header>
@@ -112,21 +112,20 @@ class LecturePage extends Component {
             </Card>
           </Col>
         </Row>
-        <br/>
-        <Row>
+        <Row className="my-md-6">
           <Col>
             <h3 className='text-justify'>
-              Lectures only: $400
+              Lectures only: $450
             </h3>
           </Col>
           <Col>
             <h3 className='text-justify'>
-              Lectures/workshop combo: $975
+              Lectures/workshop combo: $1025
             </h3>
           </Col>
         </Row>
-        <br/>
-        <Card className='card-style'>
+        
+        <Card className='card-style mb-md-6'>
           <Card.Header>
             <h5>Comment from AAQGO presentation:</h5> 
           </Card.Header>
@@ -140,7 +139,7 @@ class LecturePage extends Component {
           </Card.Body>
         </Card>
         <hr/>
-        <h1>Workshops</h1>
+        <h1 className="mt-6">Workshops</h1>
         <div>
           <h4>
             <p>
@@ -175,7 +174,7 @@ class LecturePage extends Component {
           )
           : <h3 className='text-danger'>No Workshops Currently Added</h3>
         }
-        <div>
+        <div className="my-md-4">
           <hr/>
           <h3 className='text-center'>What Students Are Saying...</h3>
           <br />

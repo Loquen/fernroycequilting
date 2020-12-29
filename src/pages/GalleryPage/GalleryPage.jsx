@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Button, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { Header } from '../../components/helpers/Header';
 import './GalleryPage.css'
 

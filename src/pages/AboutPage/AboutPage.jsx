@@ -70,9 +70,7 @@ const AboutPage = () => {
         </Row>
       </div>
       <div className='about-btn-group'>
-        <Button href='/contact'>Contact Me!</Button>
-        <Button href='/event'>Events!</Button>
-        <Button href='/lecture'>Lectures!</Button>
+        <Button href='/contact'>Say Hi!</Button>
       </div>
     </Container>
   );
