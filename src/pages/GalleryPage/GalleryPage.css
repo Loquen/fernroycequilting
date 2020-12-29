@@ -1,11 +1,9 @@
-.home-btn-group {
-  margin: 0 auto;
-
+.about-btn-group {
+  margin: 5px;
 }
 
-.home-btn-group a {
-  margin: 1rem;
-  padding: 1rem;
+.about-btn-group a {
+  margin: 0 10px 10px 0;
 }
 
 #fern-profile-pic {

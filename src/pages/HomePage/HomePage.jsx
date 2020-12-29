@@ -54,6 +54,12 @@ class HomePage extends Component {
               </p>
             </Col>
           </Row>
+          <Row>
+            <div className="home-btn-group">
+              <Button href='/contact'>Reach Out To Me!</Button>
+              <Button href='/about'>Learn More Of My Story!</Button>
+            </div>
+          </Row>
         
           <Row>
             {this.state.highlights.map((highlight, i) => 
@@ -68,11 +74,6 @@ class HomePage extends Component {
               <SubscribePage />
             </Col>
           </Row>
-        </div>
-        <div className='home-btn-group'>
-          <Button href='/contact'>Contact Me!</Button>
-          <Button href='/event'>Events!</Button>
-          <Button href='/lecture'>Lectures!</Button>
         </div>
       </Container>
     );

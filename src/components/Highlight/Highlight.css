@@ -7,10 +7,17 @@
 .highlight {
   font-size: 3rem;
   background-color: #c9c5be;
+  color:rgb(83, 83, 83);
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 5rem 0;
+  box-shadow: 5px 10px 8px #888888;
+}
+
+.highlight:hover {
+  color:rgb(36, 36, 36);
+  transition: color 1s;
 }
 
 .highlight-text {

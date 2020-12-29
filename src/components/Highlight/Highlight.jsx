@@ -4,17 +4,17 @@ import './Highlight.css';
 const Highlight = (props) => {
   const style = {
     background: `url(${props.props.img}) no-repeat center`,
-    backgroundSize: 'contain',
+    backgroundSize: 'cover',
     textAlign: 'center',
     height: '20rem',
     width: '100%',    
   }
   return (
-    <div className="highlight" style={style}>
+    <a className="highlight" style={style} href={props.props.link}>
       <div className="highlight-text">
         {props.props.title}
       </div>
-    </div>
+    </a>
   );
 };
 
