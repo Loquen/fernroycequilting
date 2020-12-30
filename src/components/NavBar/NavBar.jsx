@@ -14,7 +14,7 @@ const NavBar = (props) => {
   return (
     <Navbar variant='light' expand="md" className='navbar-custom sticky-top'>
       {/* <Nav activeKey={props.location.pathname} >  */}
-      <Navbar.Brand href='/' className='NavBar-link'>
+      <Navbar.Brand href='/' className='NavBar-link logo-text'>
         {/* <img
           alt='Sit Logo'
           src='/sit.png'

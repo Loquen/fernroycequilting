@@ -35,7 +35,7 @@ class LecturePage extends Component {
     return (
       <Container>
         <Header
-          title={'LECTURES and WORKSHOPS'}
+          title={'Lectures and Workshops'}
         />
         {/* <Jumbotron>
           <p>

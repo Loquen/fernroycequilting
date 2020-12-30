@@ -6,7 +6,8 @@ export const Header = ({title, body}) => {
   const style = {
     // backgroundImage: 'url(background.jpg)',
     color: 'rgb(60,60,60)',
-    textAlign: 'center'
+    textAlign: 'center',
+    fontFamily: 'Niconne'
   }
 
   return(

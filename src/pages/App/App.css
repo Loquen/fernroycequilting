@@ -18,12 +18,12 @@
 .btn-primary,
 .btn-primary:active,
 .btn-primary:visited {
-  background-color: #3471e2 !important;
+  background-color: #254685 !important;
   border-style: none !important;
 }
 
 .btn-primary:hover {
-  background-color: #0e44a7 !important;
+  background-color: #062052 !important;
   transition: all 1s ease;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
@@ -44,7 +44,7 @@
 }
 
 #bootstrap-override h1 {
-  font-weight: 200;
+  font-weight: 400;
 }
 
 #bootstrap-override .NavBar-link {
