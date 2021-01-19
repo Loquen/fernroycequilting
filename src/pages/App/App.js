@@ -22,7 +22,13 @@ class App extends Component {
     };
   }
 
-  /*********** L O G I N / S I G N U P *************/
+  /*********** H E L P E R S  ***********/
+
+  getYear = () => {
+    return new Date().getFullYear();
+  }
+
+  /*********** L O G I N / S I G N U P ***********/
 
   handleLogout = () => {
     userService.logout();
@@ -86,7 +92,7 @@ class App extends Component {
               <Redirect to='/login' />
           }/>
         </Switch>
-        <Footer />
+        <Footer getYear={this.getYear}/>
       </div>
     );
   }

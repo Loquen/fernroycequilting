@@ -15,7 +15,7 @@ function Footer(props) {
           </a>
         </div>
         <div className='social'>
-          <h4>Follow me on social media:</h4>
+          <h5>Follow me on social media:</h5>
           <div>
             <a className='App-link' href='https://www.pinterest.com/fernroyce/'><i className='fa fa-pinterest fa-3x'/></a>
             <a className='App-link' href='https://www.facebook.com/fernroycequilts/'><i className='fa fa-facebook fa-3x' /></a>
@@ -27,7 +27,7 @@ function Footer(props) {
         </div>
       </div>
       <div className='copyright'>
-        © 2020 <a href='https://github.com/Loquen'>Loquen Jones</a>
+        © {props.getYear()} <a href='https://github.com/Loquen'>Loquen Jones</a>
       </div>
     </div>
   );
