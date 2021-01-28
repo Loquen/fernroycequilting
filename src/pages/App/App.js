@@ -19,6 +19,27 @@ class App extends Component {
     super();
     this.state = {
       user: userService.getUser(),
+      images: [
+        '4starstring.jpg',
+        'asilomarbeach.jpg',
+        'britishsuffragistmedallion.jpg',
+        'churndash-with-bits.jpg',
+        'corduroytumbler.jpg',
+        'criss-cross-string-finished.jpg',
+        'daughterofspikes.jpg',
+        'doublecross-string-full.jpg',
+        'gwennysbaskets.jpg',
+        'logcabinvillage.jpg',
+        'marchingladies.jpg',
+        'offcentermedallion.jpg',
+        'pencilstringstar.jpg',
+        // 'seanscullywooly.jpg',
+        'thatred.jpg',
+        'tinylogcabins.jpg',
+        'together.jpg',
+        'useyourwords.jpg',
+        'vintagestar.jpg'
+      ]
     };
   }
 
@@ -76,7 +97,9 @@ class App extends Component {
             />
           }/>
           <Route exact path='/gallery' render={() => 
-            <GalleryPage />
+            <GalleryPage 
+              images={this.state.images}
+            />
           }/>
           <Route exact path='/lecture' render={() => 
             <LecturePage 

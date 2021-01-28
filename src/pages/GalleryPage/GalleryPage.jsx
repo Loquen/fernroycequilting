@@ -3,13 +3,20 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Header } from '../../components/helpers/Header';
 import './GalleryPage.css'
 
-const GalleryPage = () => {
+const GalleryPage = ({images}) => {
   return (
     <Container>
       <Header 
         title='Gallery'
       />
-      <Row className="mb-4">
+      <div class="gallery-container">
+        {images.map((image, i) => 
+          <div class="gallery-pic-wrapper">
+            <img class="gallery-pic" src={image}  alt="Fern"/>
+          </div>
+        )}
+      </div>
+      {/* <Row className="mb-4">
         <Col md={4} xs={12}>
           <img id="fern-profile-pic" src="event.jpg"  alt="Fern"/>
         </Col>
@@ -63,7 +70,7 @@ const GalleryPage = () => {
         <Col md={4} xs={12}>
           <img id="fern-profile-pic" src="workshop4.jpg"  alt="Fern"/>
         </Col>
-      </Row>
+      </Row> */}
             
     </Container>
   );
