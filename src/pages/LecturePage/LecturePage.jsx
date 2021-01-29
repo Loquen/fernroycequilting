@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Jumbotron, Alert, Row, Col, Card } from 'react-bootstrap';
+import { Container, Alert, Row, Col, Card } from 'react-bootstrap';
 import Workshop from '../../components/Workshop/Workshop';
 import { Header } from '../../components/helpers/Header';
 import workshopService from '../../utils/workshopService';
@@ -37,33 +37,6 @@ class LecturePage extends Component {
         <Header
           title={'Lectures and Workshops'}
         />
-        {/* <Jumbotron>
-          <p>
-            Sewing is part of my DNA. I was drawn to textiles from a very early age and 
-            learned to sew on a machine by age 10. I started quilting in 1995. I did not 
-            use patterns, but rather taught myself to “look” – find the block; figure out 
-            the construction. I studied books on Amish quilts, antique quilts, African 
-            American quilts – any quilt books I could find. Those books included ones 
-            by Gwen Marston. Years later I discovered her workshops and happily followed 
-            her sharp left turn – I have been skipping down the Liberated Quilting pathway 
-            ever since. With Gwen’s blessing I have been teaching students how to make 
-            their own quilts using her liberated techniques since 2012.
-          </p>
-          <p>
-            My quilt inspirations come from a sense of curiosity and questioning: What 
-            if I did this? What if I added/subtracted that? Changed this? These 
-            explorations gave me a sense of independence; allowed me to find my 
-            own path or as Gwen Marston says, “make my own quilts.”
-          </p>
-          <p>
-            My greatest joy as a teacher is sharing my love of liberated quilting 
-            and empowering other quilters to create their own work and trust their 
-            instincts, dispensing encouragement and tips along the way as they develop 
-            and hone their quilting style. I consider myself a quilting doula – 
-            encouraging and supporting my students as they birth their creative ideas. 
-            It is a privilege to be part of this long tradition of women’s work.
-          </p>
-        </Jumbotron> */}
 
         <h1 className="pt-6">Lectures</h1>
         <p>

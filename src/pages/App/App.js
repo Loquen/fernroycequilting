@@ -63,7 +63,7 @@ class App extends Component {
   render(){
     return (
       <div className="App" id='bootstrap-override'>
-        <img className="banner-image" src="background.jpg" />
+        <img className="banner-image" src="background.jpg" alt="red banner quilt" />
         <NavBar 
           location={window.location.pathname}
           user={this.state.user}

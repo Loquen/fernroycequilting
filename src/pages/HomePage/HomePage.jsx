@@ -10,17 +10,17 @@ class HomePage extends Component {
     highlights: [
       {
         title: 'Gallery',
-        img: 'asilomarbeach.jpg',
+        img: 'seanscullywooly.jpg',
         link: 'gallery'
       },
       {
         title: 'Events',
-        img: 'events.jpg',
+        img: 'pencilstringstar.jpg',
         link: '/event'
       },
       {
         title: 'Lectures',
-        img: 'lectures.jpg',
+        img: 'willynillytriangles.jpg',
         link: '/lecture'
       },
     ]
