@@ -36,7 +36,7 @@ class HomePage extends Component {
         <div>
           <Row>
             <Col className='pb-5 mx-auto d-block' >
-              <img id="fern-profile-pic" src="fern_headshot.jpg"  alt="Fern"/>
+              <img id="fern-profile-pic" src="profile.jpg"  alt="Fern"/>
             </Col>
             <Col md={8} xs={12}>
               <p>
@@ -52,13 +52,14 @@ class HomePage extends Component {
                 Johyne Geran. One of her opening statements was “Once you start quilting 
                 you won’t be able to stop”….. I was skeptical but she was right.
               </p>
+              <div className="home-btn-group">
+                <Button href='/contact'>Reach Out To Me!</Button>
+                <Button href='/about'>Learn More Of My Story!</Button>
+              </div>
             </Col>
           </Row>
           <Row>
-            <div className="home-btn-group">
-              <Button href='/contact'>Reach Out To Me!</Button>
-              <Button href='/about'>Learn More Of My Story!</Button>
-            </div>
+            
           </Row>
         
           <Row>

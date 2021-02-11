@@ -4,6 +4,18 @@ import { Header } from '../../components/helpers/Header';
 import './AboutPage.css'
 
 const AboutPage = () => {
+  const photos = [
+    {
+      link: 'handstitch.jpg',
+    },
+    {
+      link: 'action.jpg'
+    },
+    {
+      link: 'handstitch2.jpg'
+    }
+  ]
+
   return (
     <Container>
       <Header 
@@ -13,7 +25,7 @@ const AboutPage = () => {
       <div>
         <Row>
           <Col className='pb-5 mx-auto d-block' >
-            <img id="fern-profile-pic" src="fern_headshot.jpg"  alt="Fern"/>
+            <img className="about-page__photo" src="profile.jpg"  alt="Fern"/>
           </Col>
           <Col md={8} xs={12}>
             <p>
@@ -39,16 +51,12 @@ const AboutPage = () => {
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col md={8} xs={12}>
             <p>
               I took my first quilting class in 1995 at New Pieces in Berkeley with 
               Johyne Geran. One of her opening statements was “Once you start quilting 
               you won’t be able to stop”….. I was skeptical but she was right.
             </p>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
             <p>
               Many more classes followed that first one with such quilting notables 
               as Roberta Horton, Mary Mashuta and Freddy Moran. Best of all, I was 
@@ -67,11 +75,24 @@ const AboutPage = () => {
               honor to be part of and carrying forward the long tradition of quiltmaking.
             </p>
           </Col>
+          <Col className='pb-5 mx-auto d-block' >
+            <img className="about-page__photo" src="joy.jpg"  alt="Fern"/>
+          </Col>
         </Row>
+        <Row>
+          <div className='about-btn-group justify-content-center'>
+            <Button href='/contact'>Say Hi!</Button>
+          </div>
+        </Row>
+        <Row className="about-page__photo">
+            {photos.map((photo, i) => 
+              <Col md={4} xs={12}>
+                <img className="about-page__photo-real" src={photo.link}  alt="Fern"/>
+              </Col>
+            )}
+          </Row>
       </div>
-      <div className='about-btn-group'>
-        <Button href='/contact'>Say Hi!</Button>
-      </div>
+      
     </Container>
   );
 }

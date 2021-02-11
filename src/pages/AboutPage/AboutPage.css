@@ -1,6 +1,8 @@
 .about-btn-group {
-  margin: 0 auto;
-  width: 100%
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
 }
 
 .about-btn-group a {
@@ -11,6 +13,15 @@
 
 #fern-profile-pic {
   width: 100%;
+}
+
+.about-page__photo, .about-page__photo-real {
+  width: 100%;
+}
+
+.about-page__photo-real {
+  margin-top: 5rem;
+  /* padding-top: 2rem; */
 }
 
 @media (max-width: 768px) {
