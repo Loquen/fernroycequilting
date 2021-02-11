@@ -68,8 +68,14 @@
     padding-top: 20px;
   }
 
+  .insta {
+    text-align: center;
+    width: 100%;
+  }
+
   .insta img {
     margin: 20px;
+    width: 15rem;
   }
 
   .social {
