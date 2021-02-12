@@ -47,14 +47,14 @@ class LecturePage extends Component {
           <Col xs={12} md={4}>
             <Card className='card-style'>
               <Card.Header>
-                <h4><em>Following the Inspiration</em></h4>
+                <h4><em>Making It Up As I Go Along</em></h4>
               </Card.Header>
               <Card.Body>
-                Where does a quilt idea come from and how does 
-                it get from an idea to an actual quilt? Fern’s lecture and trunk show 
-                describes the starting point (inspiration) of each of her quilts and the 
-                path it took to completion, including the steps or missteps, quick gestation 
-                or months/years long process.
+              Join me for a guided tour of my quilting process as I describe 
+              the creative but, often unknown, path I travel as I make my quilts. 
+              Whether the quilt seed starts from a question, a sketch, my scraps 
+              or my imagination, I am never completely sure of where it will take 
+              me. I am truly often making it up as I go along.
               </Card.Body>
             </Card>
           </Col>
