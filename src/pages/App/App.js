@@ -33,12 +33,11 @@ class App extends Component {
         'marchingladies.jpg',
         'offcentermedallion.jpg',
         'pencilstringstar.jpg',
-        // 'seanscullywooly.jpg',
         'thatred.jpg',
         'tinylogcabins.jpg',
-        'together.jpg',
+        'pastel_blue.jpg',
         'useyourwords.jpg',
-        'vintagestar.jpg'
+        'willynillytriangles.jpg'
       ]
     };
   }

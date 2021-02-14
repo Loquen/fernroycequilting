@@ -3,6 +3,7 @@ import { Container, Alert, Row, Col, Card } from 'react-bootstrap';
 import Workshop from '../../components/Workshop/Workshop';
 import { Header } from '../../components/helpers/Header';
 import workshopService from '../../utils/workshopService';
+import './LecturePage.css'
 
 class LecturePage extends Component {
 
@@ -39,22 +40,25 @@ class LecturePage extends Component {
         />
 
         <h1 className="pt-6">Lectures</h1>
-        <p>
+        <p className="notice text-danger">At this time all workshops and lectures are virtual.</p>
+        {/* <p>
           A trunk show of quilts with stories. Supplies needed: a podium, 
           microphone, table for quilts and 2 helpers to hold quilts.
-        </p>
+        </p> */}
         <Row className="my-md-5">
           <Col xs={12} md={4}>
             <Card className='card-style'>
-              <Card.Header>
+             <Card.Header>
                 <h4><em>Making It Up As I Go Along</em></h4>
               </Card.Header>
+              {/* <Card.Img variant="top" src="pencilstringstar.jpg" /> */}
               <Card.Body>
-              Join me for a guided tour of my quilting process as I describe 
-              the creative but, often unknown, path I travel as I make my quilts. 
-              Whether the quilt seed starts from a question, a sketch, my scraps 
-              or my imagination, I am never completely sure of where it will take 
-              me. I am truly often making it up as I go along.
+                {/* <Card.Title>Making It Up As I Go Along</Card.Title> */}
+                Join me for a guided tour of my quilting process as I describe 
+                the creative but, often unknown, path I travel as I make my quilts. 
+                Whether the quilt seed starts from a question, a sketch, my scraps 
+                or my imagination, I am never completely sure of where it will take 
+                me. I am truly often making it up as I go along.
               </Card.Body>
             </Card>
           </Col>
